@@ -13,7 +13,7 @@ public class Main {
         } catch(IOException e) {
             e.printStackTrace();
         }
-        
+
         finalStr = stringProcessor.processText(finalStr);
 
         stringProcessor.showResult(finalStr);
