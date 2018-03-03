@@ -5,22 +5,22 @@ public class Hoop extends SportToy {
 
     private double radius;
 
-    public Hoop(Size size, Age age, SportName sportName, double radius) {
+    public Hoop(final Size size, final Age age, final SportName sportName, final double radius) {
         setSize(size);
         setAge(age);
         setSportName(sportName);
         this.radius = radius;
     }
 
-    public double getRadius() {
+    public final double getRadius() {
         return radius;
     }
 
-    public void setRadius(double radius) {
+    public final void setRadius(final double radius) {
         this.radius = radius;
     }
 
-    public ToyType getToyType() {
+    public final ToyType getToyType() {
         return toyType;
     }
 

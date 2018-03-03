@@ -2,7 +2,10 @@ package ua.lviv.iot;
 
 import java.util.List;
 
-public class Main {
+public final class Main {
+
+    private Main() {
+    }
 
     public static void main(final String[] args) {
         GameManager gameManager = new GameManager();
@@ -16,9 +19,13 @@ public class Main {
         System.out.println("\nInitial list of toys:\n");
         printList(gameManager.getToys());
 
+        System.out.println("\nList of found toys:\n");
+        printList(gameManager.findByGroup(Age.BABY, Size.BIG, ToyType.DOLL));
+
         System.out.println("\nSorted list:\n");
         gameManager.sortByAge(gameManager.getToys());
         printList(gameManager.getToys());
+
     }
 
     /**

@@ -5,22 +5,22 @@ public class Ball extends SportToy {
 
     private BallType ballType;
 
-    public Ball(Size size, Age age, SportName sportName, BallType ballType) {
+    public Ball(final Size size, final Age age, final SportName sportName, final BallType ballType) {
         setSize(size);
         setAge(age);
         setSportName(sportName);
         this.ballType = ballType;
     }
 
-    public BallType getBallType() {
+    public final BallType getBallType() {
         return ballType;
     }
 
-    public void setBallType(BallType ballType) {
+    public final void setBallType(final BallType ballType) {
         this.ballType = ballType;
     }
 
-    public ToyType getToyType() {
+    public final ToyType getToyType() {
         return toyType;
     }
 

@@ -5,21 +5,21 @@ public class Doll extends Toy {
 
     private Sex sex;
 
-    public Doll(Size size, Age age, Sex sex) {
+    public Doll(final Size size, final Age age, final Sex sex) {
         setSize(size);
         setAge(age);
         this.sex = sex;
     }
 
-    public Sex getSex() {
+    public final Sex getSex() {
         return sex;
     }
 
-    public void setSex(Sex sex) {
+    public final void setSex(final Sex sex) {
         this.sex = sex;
     }
 
-    public ToyType getToyType() {
+    public final ToyType getToyType() {
         return toyType;
     }
 

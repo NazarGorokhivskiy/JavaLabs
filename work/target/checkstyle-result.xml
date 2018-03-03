@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.18">
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\Age.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\Ball.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\BallType.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\Doll.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\GameManager.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\Hoop.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\Main.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\Sex.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\Size.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\SportName.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\SportToy.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\Toy.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\ToyCar.java">
+</file>
+<file name="E:\JavaLabs\work\src\main\java\ua\lviv\iot\ToyType.java">
+</file>
+</checkstyle>

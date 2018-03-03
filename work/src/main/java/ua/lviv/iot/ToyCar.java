@@ -5,21 +5,21 @@ public class ToyCar extends Toy {
 
     private boolean isCargo;
 
-    ToyCar(Size size, Age age, boolean isCargo) {
+    ToyCar(final Size size, final Age age, final boolean isCargo) {
         setSize(size);
         setAge(age);
         this.isCargo = isCargo;
     }
 
-    public boolean isCargo() {
+    public final boolean isCargo() {
         return isCargo;
     }
 
-    public void setCargo(boolean isCargo) {
+    public final void setCargo(final boolean isCargo) {
         this.isCargo = isCargo;
     }
 
-    public ToyType getToyType() {
+    public final ToyType getToyType() {
         return toyType;
     }
 
