@@ -39,4 +39,21 @@ class GameManagerTest {
             assertEquals(toyList.get(i), gameManager.getToys().get(i));
         }
     }
+
+    @Test
+    void sortByAge() {
+
+    }
+
+    @Test
+    void findByGroup() {
+    }
+
+    @Test
+    void calculateToyQuantity1() {
+    }
+
+    @Test
+    void addToy() {
+    }
 }
