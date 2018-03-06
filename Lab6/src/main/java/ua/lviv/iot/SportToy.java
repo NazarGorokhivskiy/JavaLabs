@@ -3,7 +3,7 @@ package ua.lviv.iot;
 public abstract class SportToy extends Toy {
     private SportName sportName;
 
-    public final SportName getSportType() {
+    public final SportName getSportName() {
         return sportName;
     }
 

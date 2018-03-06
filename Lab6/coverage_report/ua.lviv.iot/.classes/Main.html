@@ -1,0 +1,125 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Main</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">ua.lviv.iot</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Main (ua.lviv.iot)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Main</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 21)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package ua.lviv.iot;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.List;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;public final class Main {
+<i>6</i>&nbsp;
+<b class="nc"><i>7</i>&nbsp;    private Main() {</b>
+<b class="nc"><i>8</i>&nbsp;    }</b>
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;    public static void main(final String[] args) {
+<b class="nc"><i>11</i>&nbsp;        GameManager gameManager = new GameManager();</b>
+<i>12</i>&nbsp;
+<b class="nc"><i>13</i>&nbsp;        gameManager.addToy(new Ball(Size.SMALL, Age.SCHOOLER, SportName.BALL_GAME, BallType.VOLEYBALL));</b>
+<b class="nc"><i>14</i>&nbsp;        gameManager.addToy(new Doll(Size.BIG, Age.PRESCHOOLER, Sex.FEMALE));</b>
+<b class="nc"><i>15</i>&nbsp;        gameManager.addToy(new Hoop(Size.MEDIUM, Age.BABY, SportName.GYMNASTICS, 0));</b>
+<b class="nc"><i>16</i>&nbsp;        gameManager.addToy(new ToyCar(Size.BIG, Age.SCHOOLER, false));</b>
+<i>17</i>&nbsp;
+<b class="nc"><i>18</i>&nbsp;        System.out.println(&quot;\nInitial list of toys:\n&quot;);</b>
+<b class="nc"><i>19</i>&nbsp;        printList(gameManager.getToys());</b>
+<i>20</i>&nbsp;
+<b class="nc"><i>21</i>&nbsp;        System.out.println(&quot;\nList of found toys:\n&quot;);</b>
+<b class="nc"><i>22</i>&nbsp;        printList(gameManager.findByGroup(Age.BABY, Size.BIG, ToyType.DOLL));</b>
+<i>23</i>&nbsp;
+<b class="nc"><i>24</i>&nbsp;        System.out.println(&quot;\nSorted list:\n&quot;);</b>
+<b class="nc"><i>25</i>&nbsp;        gameManager.sortByAge(gameManager.getToys());</b>
+<b class="nc"><i>26</i>&nbsp;        printList(gameManager.getToys());</b>
+<i>27</i>&nbsp;
+<b class="nc"><i>28</i>&nbsp;    }</b>
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;    /**
+<i>31</i>&nbsp;     * Shows all element of the list
+<i>32</i>&nbsp;     *
+<i>33</i>&nbsp;     * @param list of toys
+<i>34</i>&nbsp;     */
+<i>35</i>&nbsp;    public static void printList(final List&lt;Toy&gt; list) {
+<b class="nc"><i>36</i>&nbsp;        for (Toy toy : list) {</b>
+<b class="nc"><i>37</i>&nbsp;            System.out.print(toy.getAge() + &quot;, &quot;);</b>
+<b class="nc"><i>38</i>&nbsp;            System.out.print(toy.getSize() + &quot;, &quot;);</b>
+<b class="nc"><i>39</i>&nbsp;            System.out.println(toy.getToyType());</b>
+<b class="nc"><i>40</i>&nbsp;        }</b>
+<b class="nc"><i>41</i>&nbsp;    }</b>
+<i>42</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-03-06 12:31</div>
+</div>
+</body>
+</html>

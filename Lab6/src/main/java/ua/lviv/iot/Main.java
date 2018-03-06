@@ -14,7 +14,6 @@ public final class Main {
         gameManager.addToy(new Doll(Size.BIG, Age.PRESCHOOLER, Sex.FEMALE));
         gameManager.addToy(new Hoop(Size.MEDIUM, Age.BABY, SportName.GYMNASTICS, 0));
         gameManager.addToy(new ToyCar(Size.BIG, Age.SCHOOLER, false));
-        gameManager.addToy(new Ball(Size.SMALL, Age.SCHOOLER, SportName.BALL_GAME, BallType.VOLEYBALL));
 
         System.out.println("\nInitial list of toys:\n");
         printList(gameManager.getToys());

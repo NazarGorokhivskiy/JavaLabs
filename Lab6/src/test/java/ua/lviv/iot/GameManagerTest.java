@@ -1,26 +1,37 @@
 package ua.lviv.iot;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class GameManagerTest {
     private GameManager gameManager = new GameManager();
+    private Toy ball;
+    private Toy doll;
+    private Toy hoop;
+    private Toy car;
 
-    @Test
-    void getToys() {
-        Toy ball = new Ball(Size.BIG ,Age.SCHOOLER, SportName.BALL_GAME, BallType.VOLEYBALL);
+    @BeforeEach
+    void setUp() {
+        ball = new Ball(Size.SMALL, Age.BABY, SportName.BALL_GAME, BallType.VOLEYBALL);
+        doll = new Doll(Size.BIG, Age.PRESCHOOLER, Sex.FEMALE);
+        hoop = new Hoop(Size.MEDIUM, Age.SCHOOLER, SportName.GYMNASTICS, 0);
+        car = new ToyCar(Size.BIG, Age.SCHOOLER, false);
+
+        gameManager.addToy(doll);
+        gameManager.addToy(hoop);
+        gameManager.addToy(car);
         gameManager.addToy(ball);
-        assertEquals(ball, gameManager.getToys().get(0));
     }
 
     @Test
     void calculateToyQuantity() {
-        Toy ball = new Doll(Size.BIG ,Age.SCHOOLER, Sex.MALE);
-        gameManager.addToy(ball);
         assertEquals(10, gameManager.calculateToyQuantity(200));
     }
 
@@ -42,18 +53,17 @@ class GameManagerTest {
 
     @Test
     void sortByAge() {
+        gameManager.sortByAge(gameManager.getToys());
 
+        assertEquals(ball, gameManager.getToys().get(0));
+        assertEquals(doll, gameManager.getToys().get(1));
+        assertEquals(hoop, gameManager.getToys().get(2));
+        assertEquals(car, gameManager.getToys().get(3));
     }
 
     @Test
     void findByGroup() {
-    }
-
-    @Test
-    void calculateToyQuantity1() {
-    }
-
-    @Test
-    void addToy() {
+        List<Toy> foundList = gameManager.findByGroup(null, null, ToyType.BALL);
+        assertEquals(ball, foundList.get(0));
     }
 }
