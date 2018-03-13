@@ -12,14 +12,6 @@ public class Hoop extends SportToy {
         this.radius = radius;
     }
 
-    public String getHeaders() {
-        return super.getHeaders() + "," + "radius" + "\n";
-    }
-
-    public String toCSV() {
-        return super.toCSV() + "," + getRadius() + "\n";
-    }
-
 
     public final double getRadius() {
         return radius;

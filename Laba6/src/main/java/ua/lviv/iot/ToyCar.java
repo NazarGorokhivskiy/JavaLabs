@@ -11,15 +11,6 @@ public class ToyCar extends Toy {
         this.isCargo = isCargo;
     }
 
-    public String getHeaders() {
-        return super.getHeaders() + "," + "isCargo" + "\n";
-    }
-
-    public String toCSV() {
-        return super.toCSV() + "," + isCargo() + "\n";
-    }
-
-
 
     public final boolean isCargo() {
         return isCargo;

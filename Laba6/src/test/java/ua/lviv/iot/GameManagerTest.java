@@ -66,11 +66,4 @@ class GameManagerTest {
         List<Toy> foundList = gameManager.findByGroup(null, null, ToyType.BALL);
         assertEquals(ball, foundList.get(0));
     }
-
-    @Test
-    void testFileWriter() {
-        ToyWriter toyWriter = new ToyWriter();
-
-        toyWriter.writeToFile(gameManager.getToys());
-    }
 }

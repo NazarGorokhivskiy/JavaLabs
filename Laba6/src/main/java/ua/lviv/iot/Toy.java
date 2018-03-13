@@ -10,14 +10,6 @@ public abstract class Toy implements Comparable<Toy> {
 
     public abstract ToyType getToyType();
 
-    public String getHeaders() {
-        return "toy_type,price,age,size";
-    }
-
-    public String toCSV() {
-        return getToyType() + "," + getPrice() + "," + getAge() + "," + getSize();
-    }
-
 
     public final int compareTo(final Toy toy) {
         return toy.getAge().compareTo(getAge());

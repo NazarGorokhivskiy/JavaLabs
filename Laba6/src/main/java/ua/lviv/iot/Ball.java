@@ -12,14 +12,6 @@ public class Ball extends SportToy {
         this.ballType = ballType;
     }
 
-    public String getHeaders() {
-        return super.getHeaders() + "," + "ball_type" + "\n";
-    }
-
-    public String toCSV() {
-        return super.toCSV() + "," + getBallType() + "\n";
-    }
-
 
     public final BallType getBallType() {
         return ballType;

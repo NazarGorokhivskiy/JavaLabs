@@ -11,15 +11,6 @@ public class Doll extends Toy {
         this.sex = sex;
     }
 
-    public String getHeaders() {
-        return super.getHeaders() + "," + "sex" + "\n";
-    }
-
-    public String toCSV() {
-        return super.toCSV() + "," + getSex() + "\n";
-    }
-
-
     public final Sex getSex() {
         return sex;
     }
