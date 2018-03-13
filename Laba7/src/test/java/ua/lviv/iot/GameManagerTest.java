@@ -68,7 +68,7 @@ class GameManagerTest {
     }
 
     @Test
-    void testFileWriter() {
+    void foo() {
         ToyWriter toyWriter = new ToyWriter();
 
         toyWriter.writeToFile(gameManager.getToys());
