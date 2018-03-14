@@ -70,7 +70,6 @@ class GameManagerTest {
     @Test
     void foo() {
         ToyWriter toyWriter = new ToyWriter();
-
         toyWriter.writeToFile(gameManager.getToys());
     }
 }

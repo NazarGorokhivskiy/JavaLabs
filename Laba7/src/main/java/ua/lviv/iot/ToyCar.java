@@ -12,11 +12,11 @@ public class ToyCar extends Toy {
     }
 
     public String getHeaders() {
-        return super.getHeaders() + "," + "isCargo" + "\n";
+        return super.getHeaders() + COMA + "isCargo";
     }
 
     public String toCSV() {
-        return super.toCSV() + "," + isCargo() + "\n";
+        return super.toCSV() + COMA + isCargo();
     }
 
 

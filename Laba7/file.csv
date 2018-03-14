@@ -1,4 +1,8 @@
 DOLL,20.0,PRESCHOOLER,BIG,FEMALE
+toy_type,price,age,size,sex
 HOOP,20.0,SCHOOLER,MEDIUM,0.0
+toy_type,price,age,size,radius
 CAR,20.0,SCHOOLER,BIG,false
+toy_type,price,age,size,isCargo
 BALL,20.0,BABY,SMALL,VOLEYBALL
+toy_type,price,age,size,ball_type

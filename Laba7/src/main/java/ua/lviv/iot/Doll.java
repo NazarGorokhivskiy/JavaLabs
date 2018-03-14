@@ -12,11 +12,11 @@ public class Doll extends Toy {
     }
 
     public String getHeaders() {
-        return super.getHeaders() + "," + "sex" + "\n";
+        return super.getHeaders() + COMA + "sex";
     }
 
     public String toCSV() {
-        return super.toCSV() + "," + getSex() + "\n";
+        return super.toCSV() + COMA + getSex();
     }
 
 

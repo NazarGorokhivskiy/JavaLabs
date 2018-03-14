@@ -13,11 +13,11 @@ public class Hoop extends SportToy {
     }
 
     public String getHeaders() {
-        return super.getHeaders() + "," + "radius" + "\n";
+        return super.getHeaders() + COMA + "radius";
     }
 
     public String toCSV() {
-        return super.toCSV() + "," + getRadius() + "\n";
+        return super.toCSV() + COMA + getRadius();
     }
 
 

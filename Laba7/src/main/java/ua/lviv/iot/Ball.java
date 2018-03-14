@@ -13,11 +13,11 @@ public class Ball extends SportToy {
     }
 
     public String getHeaders() {
-        return super.getHeaders() + "," + "ball_type" + "\n";
+        return super.getHeaders() + COMA + "ball_type";
     }
 
     public String toCSV() {
-        return super.toCSV() + "," + getBallType() + "\n";
+        return super.toCSV() + COMA + getBallType();
     }
 
 

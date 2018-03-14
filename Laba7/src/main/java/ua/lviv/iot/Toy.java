@@ -7,6 +7,8 @@ public abstract class Toy implements Comparable<Toy> {
     private double price = TOY_PRICE;
     private Age age;
     private Size size;
+    final static String COMA = ",";
+
 
     public abstract ToyType getToyType();
 
@@ -15,7 +17,7 @@ public abstract class Toy implements Comparable<Toy> {
     }
 
     public String toCSV() {
-        return getToyType() + "," + getPrice() + "," + getAge() + "," + getSize();
+        return getToyType() + COMA + getPrice() + COMA + getAge() + COMA + getSize();
     }
 
 
