@@ -1,6 +1,8 @@
 package ua.lviv.iot;
 
 public abstract class Toy implements Comparable<Toy> {
+    private Integer id;
+
     private static final int TOY_PRICE = 20;
     private double price = TOY_PRICE;
     private Age age;
@@ -34,5 +36,13 @@ public abstract class Toy implements Comparable<Toy> {
 
     public final void setSize(final Size size) {
         this.size = size;
+    }
+
+    public final Integer getId() {
+        return id;
+    }
+
+    public final void setId(final Integer id) {
+        this.id = id;
     }
 }
