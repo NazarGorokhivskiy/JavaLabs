@@ -7,31 +7,31 @@ import java.util.Map;
 
 @Path("/toys")
 public class ToyService {
-    private Map<Integer, Toy> toys = new HashMap<>();
+
+    private static Map<Integer, Hoop> toys = new HashMap<>();
 
     @GET
-    @Path("{id}/")
+    @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Toy getToy(@PathParam("id") Integer id) {
+    public Hoop getToy(@PathParam("id") Integer id) {
         return toys.get(id);
     }
 
-    @PUT
-    @Path("{id}/")
+    @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public void createToy(@PathParam("id") Integer id, Toy toy) {
-        toys.put(id, toy);
+    public void createToy(Hoop toy) {
+        toys.put(toy.getId(), toy);
     }
 
-    @POST
-    @Path("{id}/")
+    @PUT
+    @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public void creteToy(@PathParam("id") Integer id, Toy toy) {
+    public void replaceToy(@PathParam("id") Integer id, Hoop toy) {
         toys.replace(id, toy);
     }
 
     @DELETE
-    @Path("{id}/")
+    @Path("/{id}")
     public void deleteToy(@PathParam("id") Integer position) {
         toys.remove(position);
     }

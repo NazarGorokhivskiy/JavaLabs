@@ -1,16 +1,22 @@
 package ua.lviv.iot;
 
-public class Hoop extends SportToy {
+public class Hoop {
+    private int id;
     private final ToyType toyType = ToyType.HOOP;
+    private double price;
 
     private double radius;
 
-    public Hoop(final Size size, final Age age, final SportName sportName, final double radius) {
-        setSize(size);
-        setAge(age);
-        setSportName(sportName);
-        this.radius = radius;
+    public Hoop() {
+
     }
+//
+//    public Hoop(final Size size, final Age age, final SportName sportName, final double radius) {
+//        setSize(size);
+//        setAge(age);
+//        setSportName(sportName);
+//        this.radius = radius;
+//    }
 
     public final double getRadius() {
         return radius;
@@ -24,4 +30,19 @@ public class Hoop extends SportToy {
         return toyType;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

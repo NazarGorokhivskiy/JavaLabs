@@ -18,7 +18,7 @@ public abstract class Toy implements Comparable<Toy> {
         return price;
     }
 
-    public final void setPrice(final double price) {
+    public void setPrice(final double price) {
         this.price = price;
     }
 
