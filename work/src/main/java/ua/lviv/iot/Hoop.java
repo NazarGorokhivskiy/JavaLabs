@@ -1,22 +1,24 @@
 package ua.lviv.iot;
 
+import javax.persistence.*;
+
+@Entity
 public class Hoop {
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name = "id")
     private int id;
-    private final ToyType toyType = ToyType.HOOP;
+
+    @Column(name ="price")
     private double price;
 
+    @Column(name ="radius")
     private double radius;
 
     public Hoop() {
 
     }
-//
-//    public Hoop(final Size size, final Age age, final SportName sportName, final double radius) {
-//        setSize(size);
-//        setAge(age);
-//        setSportName(sportName);
-//        this.radius = radius;
-//    }
 
     public final double getRadius() {
         return radius;
@@ -24,10 +26,6 @@ public class Hoop {
 
     public final void setRadius(final double radius) {
         this.radius = radius;
-    }
-
-    public final ToyType getToyType() {
-        return toyType;
     }
 
     public double getPrice() {
