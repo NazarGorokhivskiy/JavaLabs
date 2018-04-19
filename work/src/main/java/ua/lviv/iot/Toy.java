@@ -1,14 +1,27 @@
 package ua.lviv.iot;
 
-public abstract class Toy implements Comparable<Toy> {
-    private Integer id;
+import javax.persistence.*;
 
-    private static final int TOY_PRICE = 20;
-    private double price = TOY_PRICE;
-    private Age age;
-    private Size size;
+@Entity
+public class Toy implements Comparable<Toy> {
 
-    public abstract ToyType getToyType();
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name = "id")
+    private int id;
+
+    @Column(name ="price")
+    private double price;
+
+    @Column(name ="age")
+    private String age;
+
+    @Column(name ="size")
+    private String size;
+
+    public Toy() {
+
+    }
 
     public final int compareTo(final Toy toy) {
         return toy.getAge().compareTo(getAge());
@@ -22,19 +35,19 @@ public abstract class Toy implements Comparable<Toy> {
         this.price = price;
     }
 
-    public final Age getAge() {
+    public final String getAge() {
         return age;
     }
 
-    public final void setAge(final Age age) {
+    public final void setAge(final String age) {
         this.age = age;
     }
 
-    public final Size getSize() {
+    public final String getSize() {
         return size;
     }
 
-    public final void setSize(final Size size) {
+    public final void setSize(final String size) {
         this.size = size;
     }
 

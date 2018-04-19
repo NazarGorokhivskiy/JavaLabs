@@ -24,21 +24,18 @@ public class GameManager {
     /**
      * This method finds all toys that correspond to at least one of given argument
      *
-     * @param age
-     * @param size
-     * @param toyType
+     * @param age age of the child
+     * @param size toy size
      * @return List of found toys
      */
-    public final List<Toy> findByGroup(final Age age, final Size size, final ToyType toyType) {
+    public final List<Toy> findByGroup(final String age, final String size) {
         List<Toy> resultToys = new LinkedList<>();
 
         for (Toy toy : toys) {
-            if ((toy.getAge() == age) || (toy.getSize() == size)
-                    || (toy.getToyType() == toyType)) {
+            if ((toy.getAge().equals(age)) || (toy.getSize().equals(size))) {
                 resultToys.add(toy);
             }
         }
-
         return resultToys;
     }
 

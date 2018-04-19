@@ -8,19 +8,20 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import ua.lviv.iot.Hoop;
+import ua.lviv.iot.Toy;
 
 @Named
 @Dependent
-public class StudentDaoImpl extends AbstractDao<Hoop> implements HoopDao, Serializable {
+public class ToyDaoImpl extends AbstractDao<Toy> implements ToyDao, Serializable {
     
     private static final long serialVersionUID = 1L;
-    
+
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
-    protected Class<Hoop> getEntityClass() {
-        return Hoop.class;
+    protected Class<Toy> getEntityClass() {
+        return Toy.class;
     }
 
     //@Resource

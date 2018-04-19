@@ -30,4 +30,18 @@ public abstract class AbstractDao<T> implements IDao<T> {
         return object;
     }
 
+    @Transactional(value = Transactional.TxType.REQUIRED)
+    @Override
+    public void remove(final Integer id) {
+        T result = (T) entityManager.find(getEntityClass(), id);
+        entityManager.remove(result);
+    }
+
+    @Transactional(value = Transactional.TxType.REQUIRED)
+    @Override
+    public T update(final T object) {
+        T resultEntity = entityManager.merge(object);
+        entityManager.persist(resultEntity);
+        return resultEntity;
+    }
 }

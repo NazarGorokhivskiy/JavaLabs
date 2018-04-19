@@ -1,19 +1,12 @@
 package ua.lviv.iot;
 
-import javax.persistence.*;
 
-@Entity
 public class Hoop {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    @Column(name = "id")
     private int id;
 
-    @Column(name ="price")
     private double price;
 
-    @Column(name ="radius")
     private double radius;
 
     public Hoop() {

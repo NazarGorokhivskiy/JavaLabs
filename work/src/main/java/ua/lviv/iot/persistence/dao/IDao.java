@@ -6,4 +6,7 @@ public interface IDao<T> {
 
     T persist(T object);
 
+    void remove(Integer id);
+
+    T update(T object);
 }
