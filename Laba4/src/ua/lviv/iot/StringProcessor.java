@@ -14,26 +14,18 @@ public class StringProcessor {
     }
 
     public String processText(String inputText) {
-        String regexp = "\\w[\\s+\\.!?]";
-        StringBuilder finalString = new StringBuilder(inputText); 
+        String regexp = "\\w+\\sN\\s\\d{2}\\.\\d{2}'\\d{2}\"\\sE\\s\\d{2}\\.\\d{2}'\\d{2}\"";
+        StringBuilder finalString = new StringBuilder("");
         
-        Matcher matcher = Pattern.compile(regexp).matcher(inputText);
+        Matcher m = Pattern.compile(regexp).matcher(inputText);
         
-        while (matcher.find()) {
-            String lastLetter = inputText.substring(matcher.start(), matcher.start() + 1);
-            finalString.replace(matcher.start(), matcher.start() + 1, lastLetter.toUpperCase());
+        while (m.find()) {
+            Matcher nameMatcher = Pattern.compile("\\w+\\s").matcher(m.group());
+            nameMatcher.find();
+            finalString.append(m.group().substring(nameMatcher.end()));
+            finalString.append(" ");
         }
-        
-        //firstly checks if string length isn't less that 2,
-        //then, makes last letter upperCase
-        if (finalString.length() <= 1) {
-            return finalString.toString().toUpperCase();
-        }
-        
-        int lastElementIndex = finalString.length() - 1;
-        String lastSymbol = finalString.substring(lastElementIndex);
-        finalString.replace(lastElementIndex, lastElementIndex + 1, lastSymbol.toUpperCase());
-        
+
         
         return finalString.toString();
     }

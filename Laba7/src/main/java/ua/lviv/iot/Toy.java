@@ -1,7 +1,5 @@
 package ua.lviv.iot;
 
-import java.lang.reflect.Field;
-
 public abstract class Toy implements Comparable<Toy> {
     private static final int TOY_PRICE = 20;
     private double price = TOY_PRICE;
